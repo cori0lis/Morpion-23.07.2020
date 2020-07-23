@@ -17,16 +17,31 @@ section {
     margin: auto;
     width: 15em;
     height: 15em;
-    background-color: black;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 }
 
 section div {
-    border: solid 1px grey;
+    border: solid 1px white;
     width: 5em;
     height: 5em;
+}
+
+#top-left, #top-middle, #top-right {
+    border-top: 0;
+}
+
+#bottom-left, #bottom-middle, #bottom-right {
+    border-bottom: 0;
+}
+
+#top-left, #middle-left, #bottom-left {
+    border-left: 0;
+}
+
+#top-right, #middle-right, #bottom-right {
+    border-right: 0;
 }
 
 div img {
@@ -37,8 +52,8 @@ div img {
 
 span img {
     width: 2em;
-    border-radius: 50%;
-    border: dashed 5px magenta;
+    border-radius: 10%;
+    border: dashed 2px magenta;
     filter: invert(100%);
 }
 
@@ -64,13 +79,9 @@ footer {
     font-size: x-small;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    right: 1em;
 }
 
 footer span {
-    color: rgb(221, 34, 97);
-}
-
-#empireWin, #rebelWin {
-    display: none;
+    color: red;
 }
