@@ -63,14 +63,14 @@ button:hover {
 footer {
     font-size: x-small;
     position: absolute;
-  bottom: 0;
-  
+    bottom: 0;
+    width: 100%;
 }
 
 footer span {
     color: rgb(221, 34, 97);
 }
 
-#empireWin, #rebelWin{
+#empireWin, #rebelWin {
     display: none;
 }
