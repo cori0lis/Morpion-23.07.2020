@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: grey;
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+section {
+    margin: auto;
+    width: 15em;
+    height: 15em;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section div {
+    border: solid 1px grey;
+    width: 5em;
+    height: 5em;
+}
+
+div img {
+    filter: invert(100%);
+    width: 100%;
+    padding: 1em;
+}
+
+span img {
+    width: 2em;
+    border-radius: 50%;
+    border: dashed 5px magenta;
+    filter: invert(100%);
+}
+
+div:hover {
+    background-color: magenta;
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 1em;
+    margin-top: 1em;
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    background-color: magenta;
+    color: black;
+}
+
+footer {
+    font-size: x-small;
+    position: absolute;
+  bottom: 0;
+  
+}
+
+footer span {
+    color: rgb(221, 34, 97);
+}
+
+#empireWin, #rebelWin{
+    display: none;
+}
