@@ -10,27 +10,34 @@
 
 <body>
     <h1>Morpion</h1>
-    <h2><span id="queljoueur"><img src="rebel.svg" alt=""></span> c'est à vous !</h2>
+    <h2><span id="queljoueur"><img src="empire.svg" alt="X"></span> c'est à vous !</h2>
     <section>
-        <div id="top-left"><img src="empire.svg" alt=""></div>
-        <div id="top-middle"><img src="rebel.svg" alt=""></div>
-        <div id="top-right"><img src="empire.svg" alt=""></div>
-        <div id="middle-left"><img src="rebel.svg" alt=""></div>
-        <div id="middle-middle"><img src="empire.svg" alt=""></div>
-        <div id="middle-right"><img src="rebel.svg" alt=""></div>
-        <div id="bottom-left"><img src="empire.svg" alt=""></div>
-        <div id="bottom-middle"><img src="rebel.svg" alt=""></div>
-        <div id="bottom-right"><img src="empire.svg" alt=""></div>
+        <div id="top-left"></div>
+        <div id="top-middle"></div>
+        <div id="top-right"></div>
+        <div id="middle-left"></div>
+        <div id="middle-middle"></div>
+        <div id="middle-right"></div>
+        <div id="bottom-left"></div>
+        <div id="bottom-middle"></div>
+        <div id="bottom-right"></div>
     </section>
-    <h2 id="draw">Draw!</h2>
+    <h2 id="draw"></h2>
     <h2 id="empireWin">The Empire strikes back!</h2>
-    <h2 id="rebelWin">Rebel scum wins this time!</h2>
+    <h2 id="rebelWin">Rebel scum win this time!</h2>
+    <h2 id="erreur"></h2>
+    <h3>Compteur de coups jouées : <span id="counterturns">0</span></h3>
+    <h3>Compteur de parties jouées : <h3 id="countergame">0</h3></h3>
     <button id="restart">Recommencer</button>
     <footer>
         <h4>&copy; Matthias Klos 2020 <span>&#10084;</span></h4>
     </footer>
 </body>
-
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
 <script src="script.js"></script>
+
 
 </html>
