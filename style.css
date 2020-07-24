@@ -4,18 +4,27 @@
     color: white;
 }
 
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
 body {
     background-color: grey;
     background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
 }
 
-h1{
+h1 {
     color: yellow;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
-h1, h2 {
+h1, h2, h3 {
     text-align: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 section {
@@ -25,6 +34,17 @@ section {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+}
+
+#ENDGAME {
+    width: 100vw;
+    height: 30em;
+    background-color: transparent;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 section div {
@@ -56,7 +76,7 @@ div img {
 }
 
 #queljoueur img {
-    width: 2em;
+    width: 3em;
     border-radius: 10%;
     border: dashed 2px magenta;
     filter: invert(100%);
@@ -75,6 +95,11 @@ button {
     color: white;
 }
 
+#reset {
+    margin-top: 5em;
+    padding: .2em;
+}
+
 button:hover {
     background-color: magenta;
     color: black;
@@ -84,7 +109,6 @@ footer {
     font-size: x-small;
     position: absolute;
     bottom: 0;
-    margin-top: 5em;
     right: 1em;
 }
 

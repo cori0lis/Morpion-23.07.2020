@@ -2,6 +2,8 @@ var empire = "empire"
 var rebel = "rebel"
 var activeplayer = empire
 var counter = 0
+var countergame = 0
+
 
 
 
@@ -13,29 +15,45 @@ $('div').click(function () {
             $(this).html(`<img src="empire.svg" alt="X">`);
             $('#queljoueur').html(`<img src="rebel.svg" alt="O">`);
             activeplayer = rebel;
-            $('#erreur').html(``);
+            $('#error').html(``);
         }
         else {
             $(this).html(`<img src="rebel.svg" alt="O">`);
             $('#queljoueur').html(`<img src="empire.svg" alt="X">`);
             activeplayer = empire;
-            $('#erreur').html(``);
+            $('#error').html(``);
         }
-    } else { $('#erreur').html(`La case est déjà occupée!`) }
-})
+    } else { $('#error').html(`La case est déjà occupée!`) }
 
-
-$('button').click(function () {
-    $('div').html(``);
-    $('#draw').html(``)
-    counter = 0
-    $('#counterturns').html(counter)
-})
-
-if (counter === 9) {
-
+    if (counter >= 5) {
+        if ($('#top-left').html() == $('#top-middle').html() && $('#top-middle').html() == $('#top-right').html() && $('#top-left').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        if (counter === 9) { $('#draw').html(`Egalité!`) }
+    }
 }
-else { $('#draw').html(`Egalité!`) }
+)
+
+
+
+
+
+$('#restart').click(function () {
+    $("#ENDGAME").css("display", "none");
+    $('div').html(``);
+    $('#draw').html(``);
+    $('#error').html(``);
+    $('#empireWin').html(``);
+    $('#rebelWin').html(``);
+    counter = 0;
+    $('#counterturns').html(counter);
+    countergame += 1;
+    $('#countergame').html(countergame);
+})
+
+
 
 
 
@@ -61,7 +79,7 @@ A l'evenement clic sur une case
             Le joueur actif devient le joueur 1
         FIN SI
     SINON
-        Afficher message d'erreur
+        Afficher message d'error
     FIN SI
     SI compteur == 9
     ALORS

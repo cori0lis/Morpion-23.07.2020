@@ -10,7 +10,7 @@
 
 <body>
     <h1>Morpion</h1>
-    <h2><span id="queljoueur"><img src="empire.svg" alt="X"></span> c'est à vous !</h2>
+    <h2>C'est au tour de : <span id="queljoueur"><img src="empire.svg" alt="X"></span></h2>
     <section>
         <div id="top-left"></div>
         <div id="top-middle"></div>
@@ -22,21 +22,21 @@
         <div id="bottom-middle"></div>
         <div id="bottom-right"></div>
     </section>
+    <article id="ENDGAME"></article>
     <h2 id="draw"></h2>
-    <h2 id="empireWin">The Empire strikes back!</h2>
-    <h2 id="rebelWin">Rebel scum win this time!</h2>
-    <h2 id="erreur"></h2>
+    <h2 id="empireWin"></h2>
+    <h2 id="rebelWin"></h2>
+    <h2 id="error"></h2>
     <h3>Compteur de coups jouées : <span id="counterturns">0</span></h3>
-    <h3>Compteur de parties jouées : <h3 id="countergame">0</h3></h3>
+    <h3>Compteur de parties jouées : <span id="countergame">0</span></h3>
     <button id="restart">Recommencer</button>
+    <button id="reset"><a href="">Reset</a></button>
     <footer>
         <h4>&copy; Matthias Klos 2020 <span>&#10084;</span></h4>
     </footer>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 
