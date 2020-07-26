@@ -3,8 +3,10 @@ var rebel = "rebel"
 var activeplayer = empire
 var counter = 0
 var countergame = 0
+var empirecount = 0
+var rebelcount = 0
 
-
+/* AJOUTER COMPTEUR VICTOIRE PAR EQUIPE! */
 
 
 $('div').click(function () {
@@ -62,13 +64,13 @@ $('div').click(function () {
             if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
             else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
         }
-        /* diagonal 1 */
+        /* diagonal \ */
         if ($('#top-left').html() == $('#middle-middle').html() && $('#middle-middle').html() == $('#bottom-right').html() && $('#top-left').html() != '') {
             $("#ENDGAME").css("display", "block");
             if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
             else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
         }
-        /* diagonal 2 */
+        /* diagonal / */
         if ($('#top-right').html() == $('#middle-middle').html() && $('#middle-middle').html() == $('#bottom-left').html() && $('#top-right').html() != '') {
             $("#ENDGAME").css("display", "block");
             if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
