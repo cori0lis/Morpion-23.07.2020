@@ -26,7 +26,50 @@ $('div').click(function () {
     } else { $('#error').html(`La case est déjà occupée!`) }
 
     if (counter >= 5) {
+        /* haut horizontal */
         if ($('#top-left').html() == $('#top-middle').html() && $('#top-middle').html() == $('#top-right').html() && $('#top-left').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        /* milieu horizontal */
+        if ($('#middle-left').html() == $('#middle-middle').html() && $('#middle-middle').html() == $('#middle-right').html() && $('#middle-left').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        /* bas horizontal */
+        if ($('#bottom-left').html() == $('#bottom-middle').html() && $('#bottom-middle').html() == $('#bottom-right').html() && $('#bottom-left').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        /* gauche vertical */
+        if ($('#top-left').html() == $('#middle-left').html() && $('#middle-left').html() == $('#bottom-left').html() && $('#top-left').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        /* milieu vertical */
+        if ($('#top-middle').html() == $('#middle-middle').html() && $('#middle-middle').html() == $('#bottom-middle').html() && $('#top-middle').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        /* droite vertical */
+        if ($('#top-right').html() == $('#middle-right').html() && $('#middle-right').html() == $('#bottom-right').html() && $('#top-right').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        /* diagonal 1 */
+        if ($('#top-left').html() == $('#middle-middle').html() && $('#middle-middle').html() == $('#bottom-right').html() && $('#top-left').html() != '') {
+            $("#ENDGAME").css("display", "block");
+            if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
+            else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
+        }
+        /* diagonal 2 */
+        if ($('#top-right').html() == $('#middle-middle').html() && $('#middle-middle').html() == $('#bottom-left').html() && $('#top-right').html() != '') {
             $("#ENDGAME").css("display", "block");
             if (activeplayer === rebel) $('#empireWin').html(`The Empire strikes back!`)
             else if (activeplayer === empire) $('#rebelWin').html(`The Rebellion won!`)
@@ -50,6 +93,19 @@ $('#restart').click(function () {
     counter = 0;
     $('#counterturns').html(counter);
     countergame += 1;
+    $('#countergame').html(countergame);
+})
+
+$('#reset').click(function () {
+    $("#ENDGAME").css("display", "none");
+    $('div').html(``);
+    $('#draw').html(``);
+    $('#error').html(``);
+    $('#empireWin').html(``);
+    $('#rebelWin').html(``);
+    counter = 0;
+    $('#counterturns').html(counter);
+    countergame = 0;
     $('#countergame').html(countergame);
 })
 

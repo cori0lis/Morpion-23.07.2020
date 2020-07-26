@@ -95,11 +95,6 @@ button {
     color: white;
 }
 
-#reset {
-    margin-top: 5em;
-    padding: .2em;
-}
-
 button:hover {
     background-color: magenta;
     color: black;
